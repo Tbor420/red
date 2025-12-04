@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+
+  <!-- Navbar at top center -->
+  <nav class="navbar">
+    <a href="main.html">Home</a>
+    <a href="2.html">Tech</a>
+    <a href="3.html">Archive</a>
+    <a href="4.html">Content</a>
+    <a href="5.html">Media</a>
+    <a href="6.html">Mission</a>
+  
+  </nav>
+
+<img src="image/s1.png" class="login-logo" onclick="openLoginModal()">
+
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeLoginModal()">&times;</span>
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Enter Username">
+    <input type="password" id="password" placeholder="Enter Password">
+    <button onclick="login()">Login</button>
+    <p id="login-message"></p>
+  </div>
+</div>
+
+  <div id="name">
+
+  <p>Charles Ostman</p>
+  <p>Historian of the Future X</p> <br>
+</div>
+
+
+<section class="featured">
+  <h2>Featured Articles</h2>
+  <div class="articles">
+    <div class="article-card">
+      <img src="image/p.jpg" alt="Article 1">
+      <h3>The Future of AI</h3>
+      <p>What appears to be the future for many, is already the past for some, whow are now unfolding it into th present.</p>
+    </div>
+
+    <div class="article-card">
+      <img src="image/pp.jpg" alt="Article 2">
+      <h3>Space Exploration</h3>
+      <p>How humanity is preparing to live beyond Earth in the next millennium.</p>
+    </div>
+
+    <div class="article-card">
+      <img src="image/ppp.jpg" alt="Article 3">
+      <h3>Technological Ethics</h3>
+      <p>Understanding the moral dilemmas created by rapid technological progress.</p>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

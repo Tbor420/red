@@ -1,0 +1,290 @@
+body{
+
+
+    background-image: url(image/p1.jpg);
+       background-size: cover;
+    background-position: center;
+    
+}
+
+#name {
+  position: relative;
+  margin-top: 40px;
+  color: white;  
+  text-align: center;   /* make it visible on dark background */
+  font-size: 22px;
+  font-weight: 600;
+  z-index: 1;        /* make sure it appears above background */
+}
+
+.featured {
+  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent dark */
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  margin: 40px auto;
+  border-radius: 15px;
+  max-width: 1200px;
+}
+
+.featured h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #0ea5a4; /* accent color */
+}
+
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.article-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px; /* default width */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.article-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.article-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.article-card p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #ddd;
+}
+
+.article-card a {
+  position: relative;
+  color: #0ea5a4;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.article-card a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #dae2e2;
+  transition: width 0.3s;
+}
+
+.article-card a:hover::after {
+  width: 100%;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .article-card {
+    width: 45%; /* two cards per row */
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .article-card {
+    width: 90%; /* full width on mobile */
+  }
+
+  .featured h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .article-card h3 {
+    font-size: 18px;
+  }
+
+  .article-card p {
+    font-size: 13px;
+  }
+}
+
+
+.navbar {
+  display: flex;             /* Flex container */
+  justify-content: center; 
+  
+  @font-face {
+  font-family: "Creepster.zip" ;
+  src: url("font/Creepster.zip"); format("truetype");/* Center horizontally */
+  gap: 20px;                 /* Space between links */
+  margin: 20px 0;      
+  text-align: center;      /* Top and bottom margin */
+
+} 
+  background-color: #ffffff; /* optional background */
+  padding: 10px 0;
+  border-radius: 8px;        /* optional rounded edges */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* optional shadow */
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #0b0f14;           /* dark text */
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: var(--accent);
+  color: rgb(34, 7, 153);
+}
+
+/* Logo pointer */
+/* ========== LOGIN MODAL DESIGN ========== */
+
+.login-logo {
+  position: absolute;
+  top: 20px;       /* Adjust vertical position */
+  right: 30px;     /* Adjust distance from right side */
+  width: 60px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-logo:hover {
+  transform: scale(1.1);
+}
+
+.mission-container b{
+
+  font-size: 3em;
+
+}
+
+
+.mission-container p{
+
+font-size: 1em;
+color: #e5f0ef;
+
+}
+
+.mission-container{
+
+width: 70%;
+text-align: left;
+margin: 0 auto;
+}
+/* Background blur overlay */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  backdrop-filter: blur(7px);
+  background: rgba(0, 0, 0, 0.55);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Centered modal box */
+.modal-content {
+  background: white;
+  padding: 30px 30px 40px;
+  width: 350px;
+  margin: 8% auto;
+  border-radius: 18px;
+  box-shadow: 0 10px 45px rgba(0,0,0,0.25);
+  animation: popup 0.35s ease;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Title */
+.modal-content h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #222;
+  font-weight: 700;
+}
+
+/* Inputs */
+.modal-content input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.2s;
+  font-size: 15px;
+  background: #f7f7f7;
+}
+
+.modal-content input:focus {
+  border-color: #0ea5a4;
+  box-shadow: 0 0 6px rgba(14, 165, 164, 0.3);
+}
+
+/* Login button */
+.modal-content button {
+  width: 100%;
+  padding: 12px;
+  background: #0ea5a4;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-top: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.modal-content button:hover {
+  background: #038a84;
+}
+
+/* Close button (X) */
+.close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: -10px;
+}
+
+.close:hover {
+  color: #0ea5a4;
+}
+
+/* Login message text */
+#login-message {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #d11;
+}
+
+/* Animation */
+@keyframes popup {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
